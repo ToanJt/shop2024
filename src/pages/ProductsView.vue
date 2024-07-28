@@ -1,25 +1,9 @@
 <script setup>
+import { useRouter } from 'vue-router'
+import products from '../products';
 import { Icon } from "@iconify/vue"
 
 
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Navigation } from "swiper/modules";
-import 'swiper/css/navigation';
-import 'swiper/css';
-
-// import ProductCard from "../components/ProductCard.vue"
-import products from "../products"
-console.log(products)
-
-const modules = [Navigation]
-const onSwiper = (swiper) => {
-    console.log("Hello")
-}
-const onSlideChange = () => {
-    console.log("slide change")
-}
-
-import { useRouter } from 'vue-router'
 const router = useRouter();
 const moreProduct = (id) => {
     router.push({ name: 'product-details', params: { id: id } })
@@ -28,19 +12,12 @@ const moreProduct = (id) => {
 </script>
 
 <template>
-    <div class="w-pc mx-auto mt-16">
-        <div class="flex justify-between items-center">
-            <h1 class="text-left text-4xl font-bold mb-8">Ưu đãi hôm nay</h1>
-            <div class="flex items-center gap-2 cursor-pointer font-semibold">
-                <p>Xem thêm</p>
-                <Icon icon="cil:arrow-right" width="1.2em" height="1.2em" class="arrow transition-all  text-black" />
-            </div>
-        </div>
-        <Swiper :modules="modules" @slideChange="onSlideChange" @swiper="onSwiper" navigation :slides-per-view="4"
-            :space-between="20" class="flex gap-4 deals-slide">
-            <SwiperSlide v-for="product in products" :key="product.id">
+    <div class="text-left w-pc mx-auto mt-10 mb-20">
+        <h1 class="text-4xl font-semibold mb-8">Tất Cả Sản Phẩm</h1>
+        <div class="w-full flex flex-wrap gap-4">
+            <div v-for="product in products" :key="product.id">
                 <div @click="moreProduct(product.id)"
-                    class="product-card overflow-hidden relative pb-8 flex flex-col bg-white rounded-sm px-8 max-w-80">
+                    class=" cursor-pointer product-card overflow-hidden relative pb-8 flex flex-col bg-white rounded-sm px-8">
                     <div class=" absolute z-50 cursor-pointer right-6 top-4">
                         <div
                             class="eye-option1 transition-all hover:bg-secondary bg-none w-8 h-8 flex items-center justify-center rounded-full">
@@ -71,21 +48,22 @@ const moreProduct = (id) => {
                     <button class="bg-secondary transition-all text-black hover:bg-black hover:text-white ">Thêm vào giỏ
                         hàng</button>
                 </div>
-            </SwiperSlide>
-        </Swiper>
+            </div>
+        </div>
     </div>
 </template>
 
-<style scoped>
-.product-card {
-    border: 1px solid transparent;
-}
 
+<style scoped>
 .product-card:hover .img-product {
     transform: scale(1.1);
     cursor: pointer;
     transition: all .2s linear;
 
+}
+
+.product-card {
+    border: 1px solid transparent;
 }
 
 .product-card:hover {

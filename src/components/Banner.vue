@@ -5,7 +5,7 @@ import { Icon } from "@iconify/vue"
 <template>
     <div>
         <div class="grid grid-cols-7 w-pc mx-auto gap-4 mt-8 ">
-            <div class=" col-span-5 relative rounded-sm overflow-hidden">
+            <div class=" cursor-pointer col-span-5 relative rounded-sm overflow-hidden">
                 <div class="absolute text-left ml-16 flex flex-col h-full justify-center">
                     <p class="text-3xl uppercase">Phong cách sống</p>
                     <h1 class=" uppercase font-black my-2 tracking-wider">Nam</h1>
@@ -17,33 +17,36 @@ import { Icon } from "@iconify/vue"
                 </div>
                 <img src="https://bazaar.ui-lib.com/assets/images/banners/banner-15.jpg" alt="">
             </div>
-            <div class="col-span-2 grid gap-4">
-                <div class="relative  rounded-sm overflow-hidden">
+            <div class="col-span-2 grid overflow-hidden">
+                <div
+                    class="relative cursor-pointer hover:scale-[1.1] mb-4 transition-all h-60 rounded-sm overflow-hidden">
                     <div class="absolute ml-8 flex flex-col justify-center h-full text-left">
                         <p class="text-sm uppercase">Điểm đến mới</p>
                         <p class="text-lg uppercase font-semibold">Mùa hè</p>
-                        <p class="uppercase text-lg font-semibold">Giảm giá từ 20%</p>
+                        <p class="uppercase text-lg font-semibold">Giảm giá từ <span class="">20%</span></p>
                         <div class="animation cursor-pointer flex items-center gap-1 my-2">
                             <p class="text-black cursor-pointer ">Mua ngay</p>
                             <Icon icon="cil:arrow-right" width="1.2em" height="1.2em"
                                 class="arrow transition-all  text-black" />
                         </div>
                     </div>
-                    <img src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fbanner-17.jpg&w=384&q=75"
+                    <img class=""
+                        src="https://images.pexels.com/photos/3756863/pexels-photo-3756863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                         alt="">
                 </div>
-                <div class="relative rounded-sm overflow-hidden ">
+                <div class="relative cursor-pointer hover:scale-[1.1] transition-all rounded-sm overflow-hidden ">
                     <div class="absolute ml-8 flex flex-col justify-center h-full text-left">
-                        <p class="text-sm uppercase">Gaming 4k</p>
-                        <p class="text-lg uppercase font-semibold">Máy tính &</p>
-                        <p class="uppercase text-lg font-semibold">Laptop</p>
+                        <p class="text-sm uppercase">Thời trang hot</p>
+                        <p class="text-lg uppercase font-semibold">Mùa hè</p>
+                        <p class="uppercase text-lg font-semibold">& mùa đông</p>
                         <div class="animation cursor-pointer flex items-center gap-1 my-2">
                             <p class="text-black cursor-pointer ">Mua ngay</p>
                             <Icon icon="cil:arrow-right" width="1.2em" height="1.2em"
                                 class="arrow transition-all  text-black" />
                         </div>
                     </div>
-                    <img src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fbanner-16.jpg&w=384&q=75"
+                    <img class=" object-fill"
+                        src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt="">
                 </div>
             </div>
@@ -81,47 +84,43 @@ import { Icon } from "@iconify/vue"
         </div>
         <div class=" w-pc mx-auto mt-16 flex gap-4 ">
             <div
-                class="categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
-                <img class="card"
-                    src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fcategories%2Fcat-1.jpg&w=256&q=75"
-                    alt="">
+                class=" border-2 border-white p-4 categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
+                <img class="card h-44 mb-8"
+                    src="https://www.pngitem.com/pimgs/m/2-27490_plain-black-t-shirt-png-transparent-png.png" alt="">
                 <p class="  w-11/12 py-1 absolute bottom-4 font-semibold">
-                    Đồ chơi</p>
+                    Áo thun</p>
             </div>
             <div
-                class="categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
-                <img class="card"
-                    src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fcategories%2Fcat-2.jpg&w=256&q=75"
-                    alt="">
-                <p class=" w-11/12 py-1 absolute bottom-4 font-semibold">Thể thao</p>
+                class="border-2 border-white p-4 categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
+                <img class="card h-44 mb-8"
+                    src="https://www.pngitem.com/pimgs/m/7-70730_blue-jeans-png-transparent-png.png" alt="">
+                <p class=" w-11/12 py-1 absolute bottom-4 font-semibold">Quần Jeans</p>
             </div>
             <div
-                class="categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
-                <img class="card"
-                    src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fcategories%2Fcat-3.jpg&w=256&q=75"
-                    alt="">
-                <p class=" w-11/12 py-1 absolute bottom-4 font-semibold">Điện tử</p>
+                class="border-2 border-white p-4 categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
+                <img class="card  h-44 mb-8"
+                    src="https://www.pngitem.com/pimgs/m/136-1369955_yellow-sweater-hd-png-download.png" alt="">
+                <p class=" w-11/12 py-1 absolute bottom-4 font-semibold">Sweater</p>
             </div>
             <div
-                class="categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
-                <img class="card"
-                    src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fcategories%2Fcat-4.jpg&w=256&q=75"
-                    alt="">
-                <p class="  w-11/12 py-1 absolute bottom-4 font-semibold">Nội thất</p>
+                class="border-2 border-white p-4 categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
+                <img class="card h-44 mb-8"
+                    src="https://www.pngitem.com/pimgs/m/240-2407316_polo-shirt-kids-hd-png-download.png" alt="">
+                <p class="  w-11/12 py-1 absolute bottom-4 font-semibold">Polo</p>
             </div>
             <div
-                class="categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
-                <img class="card"
-                    src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fcategories%2Fcat-5.jpg&w=256&q=75"
+                class="border-2 border-white p-4 categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
+                <img class="card h-44 mb-8"
+                    src="https://www.pngitem.com/pimgs/m/117-1171397_download-wedding-dress-transparent-png-wedding-dress-transparent.png"
                     alt="">
-                <p class="  w-11/12 py-1 absolute bottom-4 font-semibold">Thời trang</p>
+                <p class="  w-11/12 py-1 absolute bottom-4 font-semibold">Váy</p>
             </div>
             <div
-                class="categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
-                <img class="card"
-                    src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fcategories%2Fcat-6.jpg&w=256&q=75"
+                class="border-2 border-white p-4 categories cursor-pointer bg-secondary relative flex justify-center  rounded-sm overflow-hidden">
+                <img class="card h-44 mb-8"
+                    src="https://www.pngitem.com/pimgs/m/456-4567450_black-shorts-png-transparent-transparent-background-shorts-outline.png"
                     alt="">
-                <p class="  w-11/12 py-1 absolute bottom-4 font-semibold">Máy ảnh</p>
+                <p class="  w-11/12 py-1 absolute bottom-4 font-semibold">Quần Short</p>
             </div>
         </div>
     </div>

@@ -84,7 +84,7 @@ import { Icon } from "@iconify/vue"
                 </div>
             </div>
             <div class="flex gap-10 col-span-1 ">
-                <div class="text-left">
+                <div class="text-left ">
                     <h3 class="font-semibold text-lg mb-4">Về Chúng Tôi</h3>
                     <div>
                         <p class="mb-2">Trang Chủ</p>
@@ -95,13 +95,12 @@ import { Icon } from "@iconify/vue"
                     </div>
                 </div>
                 <div class="text-left">
-                    <h3 class="font-semibold text-lg mb-4">Về Chúng Tôi</h3>
+                    <h3 class="font-semibold text-lg mb-4">Chăm Sóc Khách Hàng</h3>
                     <div>
-                        <p class="mb-2">Trang Chủ</p>
-                        <p class="mb-2">Cửa Hàng</p>
+                        <p class="mb-2">Trung Tâm Hỗ Trợ</p>
+                        <p class="mb-2">Theo Dõi Đơn Hàng Của Bạn</p>
                         <p class="mb-2">Liên Hệ</p>
-                        <p class="mb-2">Điều Khoản & Điều Kiện</p>
-                        <p>Chính Sách Bảo Mật</p>
+                        <p>Trả Hàng & Hoàn Tiền</p>
                     </div>
                 </div>
 

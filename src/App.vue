@@ -1,6 +1,6 @@
 <script setup>
 import Header from "./components/Header.vue"
-import Home from "./pages/Home.vue"
+import Home from "./pages/HomeView.vue"
 import Footer from "./components/Footer.vue"
 </script>
 
@@ -9,7 +9,7 @@ import Footer from "./components/Footer.vue"
     <Header></Header>
   </header>
   <main>
-    <Home></Home>
+    <router-view></router-view>
   </main>
   <footer>
     <Footer></Footer>

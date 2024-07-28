@@ -1,5 +1,13 @@
 <script setup>
 import { Icon } from "@iconify/vue"
+import { defineProps } from "vue"
+
+const props = defineProps({
+    product: Object
+})
+
+console.log(props.product)
+
 </script>
 
 <template>
@@ -15,10 +23,10 @@ import { Icon } from "@iconify/vue"
             </div>
         </div>
         <img class="img-product"
-            src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fproducts%2FFashion%2FClothes%2F4.DenimBlueJeans.png&w=384&q=75"
+            src="https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Fcategories%2Fcat-3.jpg&w=256&q=75"
             alt="">
         <div class="flex justify-between mt-4">
-            <p>Quần jeans denim</p>
+            <p>dasd</p>
             <p>260.000vnd</p>
         </div>
         <div class="flex items-center mb-4">
@@ -42,6 +50,10 @@ import { Icon } from "@iconify/vue"
     cursor: pointer;
     transition: all .2s linear;
 
+}
+
+.product-card {
+    border: 1px solid transparent;
 }
 
 .product-card:hover {
