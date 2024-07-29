@@ -7,6 +7,8 @@ import News from "../pages/News.vue";
 import Contact from "../pages/Contact.vue";
 import NewsDetails from "../components/NewsDetails.vue";
 import ProductDetails from "../components/ProductDetails.vue";
+import Auth from "../components/Auth.vue";
+import Cart from "../pages/Cart.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -60,6 +62,16 @@ const router = createRouter({
       path: "/contact",
       name: "contact",
       component: Contact,
+    },
+    {
+      path: "/cart",
+      name: "cart",
+      component: Cart,
+    },
+    {
+      path: "/auth",
+      name: "auth",
+      component: Auth,
     },
   ],
 });

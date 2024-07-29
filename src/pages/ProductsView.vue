@@ -2,12 +2,21 @@
 import { useRouter } from 'vue-router'
 import products from '../products';
 import { Icon } from "@iconify/vue"
-
+import { onMounted } from 'vue';
 
 const router = useRouter();
 const moreProduct = (id) => {
     router.push({ name: 'product-details', params: { id: id } })
 }
+
+
+function onTop() {
+    window.scrollTo(top)
+}
+
+onMounted(() => {
+    onTop();
+})
 
 </script>
 

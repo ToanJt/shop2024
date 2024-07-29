@@ -1,6 +1,16 @@
 <script setup>
 import { Icon } from "@iconify/vue"
 
+import { onMounted } from 'vue';
+
+
+function onTop() {
+    window.scrollTo(top)
+}
+
+onMounted(() => {
+    onTop();
+})
 
 </script>
 

@@ -3,14 +3,22 @@ import { useRouter } from 'vue-router'
 import Slug from 'vietnamese-slug'
 import fashionNews1 from "../variable/fashionNews1.js"
 import fashionNews2 from "../variable/fashionNews2.js"
+import { onMounted } from 'vue';
+
 
 const router = useRouter();
-
-
 const toDetails = (params) => {
     const slugParams = Slug(params)
     router.push({ name: "news-details", params: { id: slugParams } });
 }
+
+function onTop() {
+    window.scrollTo(top)
+}
+
+onMounted(() => {
+    onTop();
+})
 
 </script>
 

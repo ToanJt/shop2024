@@ -43,6 +43,14 @@ button {
   transition: border-color 0.25s;
 }
 
+::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+::placeholder {
+  font-size: 14px;
+}
+
 #app {
   /* max-width: 1280px;
   margin: 0 auto; */
