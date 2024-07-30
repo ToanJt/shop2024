@@ -22,7 +22,6 @@ function test() {
   <footer>
     <Footer></Footer>
   </footer>
-  <button @show-auth="test">TSET</button>
 
 </template>
 

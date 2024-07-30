@@ -4,8 +4,8 @@ import { Icon } from "@iconify/vue"
 
 <template>
     <div>
-        <div class="grid grid-cols-7 w-pc mx-auto gap-4 mt-8 ">
-            <div class=" cursor-pointer col-span-5 relative rounded-sm overflow-hidden">
+        <div class="grid grid-cols-7 w-pc mx-auto gap-4 mt-8 xl:px-0 px-4">
+            <div class=" cursor-pointer col-span-7 md:col-span-5 relative rounded-sm overflow-hidden">
                 <div class="absolute text-left ml-16 flex flex-col h-full justify-center">
                     <p class="text-3xl uppercase">Phong cách sống</p>
                     <h1 class=" uppercase font-black my-2 tracking-wider">Nam</h1>
@@ -15,9 +15,11 @@ import { Icon } from "@iconify/vue"
                         <button>Mua ngay</button>
                     </div>
                 </div>
-                <img src="https://bazaar.ui-lib.com/assets/images/banners/banner-15.jpg" alt="">
+                <div class="w-full">
+                    <img class="w-full" src="https://bazaar.ui-lib.com/assets/images/banners/banner-15.jpg" alt="">
+                </div>
             </div>
-            <div class="col-span-2 grid overflow-hidden">
+            <div class="col-span-2 md:grid hidden overflow-hidden">
                 <div
                     class="relative cursor-pointer hover:scale-[1.1] mb-4 transition-all h-60 rounded-sm overflow-hidden">
                     <div class="absolute ml-8 flex flex-col justify-center h-full text-left">

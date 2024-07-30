@@ -8,6 +8,7 @@ export default {
       },
       width: {
         pc: "1280px",
+        laptop: "",
       },
     },
   },

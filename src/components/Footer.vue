@@ -5,7 +5,7 @@ import { Icon } from "@iconify/vue"
 
 <template>
     <div class="bg-black text-white py-16 mt-20">
-        <div class="w-pc mx-auto grid grid-cols-3 gap-20">
+        <div class="container mx-auto grid grid-cols-3 gap-20">
             <div class="text-left col-span-1">
                 <div class=" flex flex-col ">
                     <h1 class="font-black">Linhle</h1>
@@ -115,10 +115,13 @@ import { Icon } from "@iconify/vue"
                     </div>
                     <div class="flex gap-2">
                         <p class="font-semibold">Email: </p>
-                        <p>21t1020868@gmail.com</p>
+                        <p>21t1020476@gmail.com</p>
                     </div>
                     <div class="flex gap-4 mt-8">
-                        <Icon icon="ic:baseline-facebook" width="2em" height="2em" style="color: white" />
+                        <a href="https://www.facebook.com/profile.php?id=100077288305905&mibextid=JRoKGi">
+                            <Icon icon="ic:baseline-facebook" width="2em" height="2em" style="color: white" />
+                        </a>
+
                         <Icon icon="uil:linkedin" width="2em" height="2em" style="color: white" />
                         <Icon icon="lucide:instagram" width="2em" height="2em" style="color: white" />
                         <Icon icon="simple-icons:instatus" width="2em" height="2em" style="color: white" />

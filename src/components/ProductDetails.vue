@@ -65,6 +65,10 @@ onMounted(() => {
                 suscipit iure sed debitis tempore, consequuntur earum non voluptatem ducimus laborum? Odit mollitia eum
                 ducimus dolorum consequuntur.</p>
             <p class="text-2xl font-semibold mt-4">{{ currentProduct.price }} VND</p>
+            <div class="flex items-center">
+                <p>Số lượng: </p>
+                <input class="bg-white ml-4 w-14 p-2" type="number" value="1">
+            </div>
             <p class="text-red-500 text-sm">Còn hàng</p>
             <button class="bg-red-500 mt-10">Thêm Vào Giỏ Hàng</button>
         </div>

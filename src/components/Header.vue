@@ -29,19 +29,25 @@ onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
 })
 
+const isActive = ref(false);
+
+function activeBar() {
+    isActive.value = !isActive.value;
+}
 
 </script>
 
 <template>
     <div :class="{ 'headroom--unpinned': scrolled }" v-on="handleScroll()"
         class="header headroom fixed left-0 right-0 top-0 z-50">
-        <div class="w-pc mx-auto relative bg-secondary pt-4 grid grid-cols-4 ">
-            <div class=" col-span-3 flex items-center gap-4">
+        <div
+            class=" container xl:container md:container mx-auto px-8 md:px-0 relative bg-secondary pt-4 grid grid-cols-4 ">
+            <div class=" sm:col-span-3 col-span-2 flex items-center gap-4">
                 <div class=" flex flex-col items-center ">
-                    <h1 class="font-black">Linhle</h1>
-                    <h3 class="ml-3 tracking-[12px] font-black text-xl">Fashion</h3>
+                    <h1 class="font-black sm:text-4xl lg:text-5xl text-2xl">Linhle</h1>
+                    <h3 class="ml-3 md:tracking-[12px] tracking-[4px] font-black lg:text-xl text-sm">Fashion</h3>
                 </div>
-                <div class="flex w-full">
+                <div class="w-full md:flex hidden">
                     <input placeholder="Nhập tên sản phẩm..."
                         class="border-[1px] border-black outline-none px-4 text-md w-full h-10 bg-secondary rounded-tl-sm rounded-bl-sm"
                         type="text">
@@ -50,19 +56,24 @@ onUnmounted(() => {
                     </div>
                 </div>
             </div>
-            <div class="flex items-center gap-6 justify-end">
-                <Icon icon="solar:heart-broken" width="2em" height="2em" style="color: black" />
-                <router-link :to="{ path: '/cart'}">
-                    <Icon icon="lets-icons:bag-light" width="2.4em" height="2.4em" style="color: black" />
+            <div class="flex items-center md:gap-6 sm:col-span-1 col-span-2 gap-2 justify-end">
+                <Icon class="sm:w-[2em] w-6" icon="solar:heart-broken" width="2em" height="2em" style="color: black" />
+                <router-link :to="{ path: '/cart' }">
+                    <Icon class="sm:w-[2.4em] w-7" icon="lets-icons:bag-light" width="2.4em" height="2.4em"
+                        style="color: black" />
                 </router-link>
                 <router-link :to="{ path: '/auth' }">
-                    <Icon class="text-black" icon="solar:user-broken" width="2em" height="2em" />
+                    <Icon class="text-black sm:w-[2em] w-6" icon="solar:user-broken" width="2em" height="2em" />
                 </router-link>
             </div>
         </div>
-        <div class="bg-black w-screen z-[999] h-20 z ">
-            <div class="w-pc h-full mx-auto text-white flex items-center gap-12">
-                <div class="relative categories ">
+        <div class="bg-black w-full z-[999] md:h-20 ">
+            <div @click="activeBar()" class="md:hidden block ml-8 py-4">
+                <Icon icon="fe:bar" width="2em" height="2em" style="color: white" />
+            </div>
+            <div :class="{ 'active-bar': isActive }"
+                class="h-screen xl:container md:container md:pb-0 pb-20 sm:pt-0 w-screen md:h-full mx-auto md:text-base md:px-0 px-8 text-2xl text-white md:flex hidden md:flex-row flex-col items-center gap-20 md:gap-12">
+                <div class="relative categories md:block hidden">
                     <div class=" cursor-pointer">
                         <p>Danh mục sản phẩm</p>
                     </div>
@@ -144,6 +155,10 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.active-bar {
+    display: flex !important;
+}
+
 .headroom {
     will-change: transform;
     transition: transform 200ms linear;
