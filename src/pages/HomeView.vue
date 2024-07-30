@@ -11,10 +11,10 @@ import AllProducts from "../components/AllProducts.vue"
 <template>
     <div>
         <Banner></Banner>
-        <!-- <Deals></Deals>
+        <Deals></Deals>
         <SecondPartVue></SecondPartVue>
         <MenFashion></MenFashion>
         <WomenFashion></WomenFashion>
-        <AllProducts></AllProducts> -->
+        <AllProducts></AllProducts>
     </div>
 </template>
