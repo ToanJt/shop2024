@@ -113,7 +113,7 @@ onMounted(() => {
             <div
                 class="  rounded-sm overflow-hidden bg-white mt-8 8 container mx-auto flex md:flex-row flex-col justify-center items-start gap-4 lg:gap-12 py-4 lg:py-6">
                 <div
-                    class=" flex gap-4 lg:items-center lg:border-r-[1px] lg:border-gray-300 lg:px-12 px-4 lg:pr-0 pr-0">
+                    class=" flex gap-4 lg:items-center lg:border-r-[1px] lg:border-gray-300 lg:pr-12 pr-4 xl:pl-0 pl-4 ">
                     <Icon class="xl:w-[3.2em] xl:h-[3.2em] w-[2.4em] h-[2.4em]" icon="mdi:truck-fast-outline"
                         width="3.2em" height="3.2em" style="color: black" />
                     <div class=" text-left lg:ml-4 ml-0">
