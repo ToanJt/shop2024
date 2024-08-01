@@ -19,9 +19,9 @@ function test() {
   <main class="md:mt-52 mt-40">
     <router-view></router-view>
   </main>
-  <!-- <footer>
+  <footer>
     <Footer></Footer>
-  </footer> -->
+  </footer>
 
 </template>
 

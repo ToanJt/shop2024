@@ -5,7 +5,7 @@ import { Icon } from "@iconify/vue"
 
 <template>
     <div class="bg-black text-white py-16 mt-20">
-        <div class="container mx-auto grid grid-cols-3 gap-20">
+        <div class="container mx-auto sm:px-0 px-8 grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-20">
             <div class="text-left col-span-1">
                 <div class=" flex flex-col ">
                     <h1 class="font-black">Linhle</h1>
