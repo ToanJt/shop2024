@@ -15,11 +15,11 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-pc mx-auto">
-        <div class=" my-10 grid grid-cols-2">
-            <div class="">
+    <div class="container mx-auto md:px-0 px-8">
+        <div class=" my-10 grid md:grid-cols-2 grid-cols-1">
+            <div class="md:mb-0 mb-8">
                 <h3 class="text-left text-3xl font-semibold mb-6">Liên hệ với chúng tôi</h3>
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2 text-left mr-2">
                     <div class="flex items-center gap-2">
                         <div class=" border-dotted border-black border-2 p-1 rounded-full">
                             <Icon icon="mingcute:location-fill" width="1.4em" height="1.4em" style="color: black" />

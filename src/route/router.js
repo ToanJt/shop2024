@@ -7,7 +7,8 @@ import News from "../pages/News.vue";
 import Contact from "../pages/Contact.vue";
 import NewsDetails from "../components/NewsDetails.vue";
 import ProductDetails from "../components/ProductDetails.vue";
-import Auth from "../components/Auth.vue";
+import SignUp from "../components/SignUp.vue";
+import SignIn from "../components/SignIn.vue";
 import Cart from "../pages/Cart.vue";
 
 const router = createRouter({
@@ -69,9 +70,14 @@ const router = createRouter({
       component: Cart,
     },
     {
-      path: "/auth",
-      name: "auth",
-      component: Auth,
+      path: "/signup",
+      name: "signup",
+      component: SignUp,
+    },
+    {
+      path: "/signin",
+      name: "signin",
+      component: SignIn,
     },
   ],
 });

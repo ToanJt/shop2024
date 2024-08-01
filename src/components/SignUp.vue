@@ -1,11 +1,21 @@
 <script setup>
 import { Icon } from '@iconify/vue'
 import { ref } from 'vue';
+import { onMounted } from 'vue';
+
+function onTop() {
+    window.scrollTo(top);
+}
+
+onMounted(() => {
+    onTop();
+})
+
 
 </script>
 
 <template>
-    <div class="grid grid-cols-2 w-pc mx-auto">
+    <div class="grid md:grid-cols-2 grid-cols-1 container mx-auto">
         <!-- Right Pane -->
         <div class="w-full bg-gray-100 flex items-center justify-center">
             <div class="max-w-md w-full p-6">
@@ -41,7 +51,7 @@ import { ref } from 'vue';
                             </svg> Đăng ký với Github </button>
                     </div>
                 </div>
-                <div class="mt-4 text-sm text-gray-600 text-center">
+                <div class="mt-4 mb-4 text-sm text-gray-600 text-center">
                     <p>hoặc đăng ký với email</p>
                 </div>
                 <form @submit.prevent="" method="POST" class="space-y-4 text-left">
@@ -68,12 +78,13 @@ import { ref } from 'vue';
                     </div>
                 </form>
                 <div class="mt-4 text-sm text-gray-600 text-center">
-                    <p>Bạn đã có tài khoản? <a href="#" class="text-black hover:underline">Đăng nhập</a>
+                    <p>Bạn đã có tài khoản?
+                        <router-link :to="{ path: 'signin' }">Đăng nhập</router-link>
                     </p>
                 </div>
             </div>
         </div>
-        <div class="w-[800px]">
+        <div class="md:w-[800px] w-0">
             <img class=""
                 src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="">

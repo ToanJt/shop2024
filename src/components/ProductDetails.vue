@@ -42,9 +42,14 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="grid grid-cols-2 w-pc mx-auto items-center">
-        <div>
-            <img class=" w-[600px]" :src="currentProduct.imageLink" alt="">
+    <div class="grid sm:grid-cols-2 grid-cols-1 sm:px-0 px-8 container mx-auto items-center">
+        <div class="grid grid-cols-4 gap-4 mr-8">
+            <div class=" col-span-1 flex flex-col gap-4">
+                <img class="border-2 w-[600px]" src="../assets/images/products/4.webp" alt="">
+                <img class="border-2 w-[600px]" src="../assets/images/products/19.webp" alt="">
+                <img class="border-2 w-[600px]" src="../assets/images/products/21.webp" alt="">
+            </div>
+            <img class="border-2  w-[600px] col-span-3" :src="currentProduct.imageLink" alt="">
         </div>
         <div class="text-left my-20">
             <h3 class="text-3xl font-semibold">{{ currentProduct.name }}</h3>

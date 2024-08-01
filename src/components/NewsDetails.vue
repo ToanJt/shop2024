@@ -55,7 +55,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-pc mx-auto text-left grid grid-cols-2 gap-10 mt-10">
+    <div class="container mx-auto lg:px-0 px-8 text-left grid md:grid-cols-2 grid-cols-1 gap-10 mt-10">
 
         <div class="text-left">
             <h1 class="text-4xl font-semibold mb-2 ">{{ currentNews.title }}</h1>

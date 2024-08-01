@@ -23,16 +23,16 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="w-pc mx-auto mt-20">
+    <div class="sm:container mx-auto mt-20">
         <div class="flex row">
             <div class="column">
                 <div @click="toDetails(news.title)" v-for="(news, index) in fashionNews1" :key="index" class="relative">
                     <img class="" :src="news.img" alt="">
                     <div
-                        class="absolute flex-col px-20 bg-white opacity-0 hover:opacity-80 transition-all duration-300 cursor-pointer top-0 bottom-0 left-0 right-0 flex justify-center">
-                        <h3 class=" mb-2 text-left text-3xl font-semibold">{{ news.title }}</h3>
-                        <p class="text-left mb-2">{{ news.content }}</p>
-                        <p class="text-left">Tác giả: {{ news.author }}</p>
+                        class="absolute flex-col sm:px-10 md:px-14 px-6 bg-white opacity-0 hover:opacity-80 transition-all duration-300 cursor-pointer top-0 bottom-0 left-0 right-0 flex justify-center">
+                        <h3 class=" mb-2 text-left lg:text-3xl sm:text-xl text-md font-semibold">{{ news.title }}</h3>
+                        <p class="text-left mb-2 lg:text-base text-sm md:block hidden">{{ news.content }}</p>
+                        <p class="text-left lg:text-base text-sm sm:block hidden">Tác giả: {{ news.author }}</p>
                     </div>
                 </div>
             </div>
@@ -40,10 +40,10 @@ onMounted(() => {
                 <div @click="toDetails(news.title)" v-for="(news, index) in fashionNews2" :key="index" class="relative">
                     <img class="w-full " :src="news.img" alt="">
                     <div
-                        class=" flex-col px-20 bg-white opacity-0 hover:opacity-80 transition-all duration-300 cursor-pointer absolute top-0 bottom-0 left-0 right-0 flex justify-center">
-                        <h3 class=" mb-2 text-left text-3xl font-semibold">{{ news.title }}</h3>
-                        <p class="text-left mb-2">{{ news.content }}</p>
-                        <p class="text-left">Tác giả: {{ news.author }}</p>
+                        class=" flex-col sm:px-10 md:px-14 px-6 bg-white opacity-0 hover:opacity-80 transition-all duration-300 cursor-pointer absolute top-0 bottom-0 left-0 right-0 flex justify-center">
+                        <h3 class=" mb-2 text-left lg:text-3xl sm:text-xl text-md font-semibold">{{ news.title }}</h3>
+                        <p class="text-left mb-2 lg:text-base text-sm md:block hidden">{{ news.content }}</p>
+                        <p class="text-left lg:text-base text-sm sm:block hidden">Tác giả: {{ news.author }}</p>
                     </div>
                 </div>
             </div>

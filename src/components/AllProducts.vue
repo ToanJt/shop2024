@@ -11,15 +11,15 @@ const moreProduct = (id) => {
 </script>
 
 <template>
-    <div class="w-pc mx-auto">
+    <div class="container mx-auto sm:px-0 px-8">
         <div class="text-left flex justify-between">
-            <h1 class="text-4xl mb-8 font-semibold">Tất Cả Sản Phẩm</h1>
-            <div class="flex items-center gap-2 cursor-pointer font-semibold">
-                <p>Xem thêm</p>
+            <h1 class="md:text-4xl text-2xl mb-8 font-semibold">Tất Cả Sản Phẩm</h1>
+            <div class="flex sm:items-center items-start gap-2 cursor-pointer font-semibold">
+                <p class="sm:text-base text-sm">Xem thêm</p>
                 <Icon icon="cil:arrow-right" width="1.2em" height="1.2em" class="arrow transition-all  text-black" />
             </div>
         </div>
-        <div class="grid grid-cols-4 gap-6">
+        <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
             <div v-for="product in products" :key="product.id">
                 <div @click="moreProduct(product.id)"
                     class="product-card overflow-hidden relative pb-8 flex flex-col bg-white rounded-sm px-8 max-w-80">
@@ -36,11 +36,11 @@ const moreProduct = (id) => {
                         </div>
                     </div>
                     <img class="img-product w-80 h-60 object-cover" :src="product.imageLink" alt="">
-                    <div class="flex justify-between mt-4">
+                    <div class="flex xl:flex-row flex-col justify-between mt-4">
                         <p>{{ product.name }}</p>
                         <p>{{ product.price }} vnd</p>
                     </div>
-                    <div class="flex items-center mb-4">
+                    <div class="flex xl:justify-start justify-center items-center mb-4">
                         <div class="flex">
                             <Icon icon="emojione:star" width="1em" height="1em" />
                             <Icon icon="emojione:star" width="1em" height="1em" />

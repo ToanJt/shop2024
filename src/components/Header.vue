@@ -40,31 +40,33 @@ function activeBar() {
 <template>
     <div :class="{ 'headroom--unpinned': scrolled }" v-on="handleScroll()"
         class="header headroom fixed left-0 right-0 top-0 z-50">
-        <div
-            class=" container xl:container md:container mx-auto px-8 md:px-0 relative bg-secondary pt-4 grid grid-cols-4 ">
-            <div class=" sm:col-span-3 col-span-2 flex items-center gap-4">
-                <div class=" flex flex-col items-center ">
-                    <h1 class="font-black sm:text-4xl lg:text-5xl text-2xl">Linhle</h1>
-                    <h3 class="ml-3 md:tracking-[12px] tracking-[4px] font-black lg:text-xl text-sm">Fashion</h3>
-                </div>
-                <div class="w-full md:flex hidden">
-                    <input placeholder="Nhập tên sản phẩm..."
-                        class="border-[1px] border-black outline-none px-4 text-md w-full h-10 bg-secondary rounded-tl-sm rounded-bl-sm"
-                        type="text">
-                    <div class="bg-black w-20 flex justify-center items-center rounded-tr-sm rounded-br-sm">
-                        <Icon icon="ic:baseline-search" width="2em" height="2em" style="color: white" />
+        <div class="bg-secondary">
+            <div class="container mx-auto px-8 md:px-0 relative bg-secondary pt-4 grid grid-cols-4 ">
+                <div class=" sm:col-span-3 col-span-2 flex items-center gap-4">
+                    <div class=" flex flex-col items-center ">
+                        <h1 class="font-black sm:text-4xl lg:text-5xl text-2xl">Linhle</h1>
+                        <h3 class="ml-3 md:tracking-[12px] tracking-[4px] font-black lg:text-xl text-sm">Fashion</h3>
+                    </div>
+                    <div class="w-full md:flex hidden">
+                        <input placeholder="Nhập tên sản phẩm..."
+                            class="border-[1px] border-black outline-none px-4 text-md w-full h-10 bg-secondary rounded-tl-sm rounded-bl-sm"
+                            type="text">
+                        <div class="bg-black w-20 flex justify-center items-center rounded-tr-sm rounded-br-sm">
+                            <Icon icon="ic:baseline-search" width="2em" height="2em" style="color: white" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="flex items-center md:gap-6 sm:col-span-1 col-span-2 gap-2 justify-end">
-                <Icon class="sm:w-[2em] w-6" icon="solar:heart-broken" width="2em" height="2em" style="color: black" />
-                <router-link :to="{ path: '/cart' }">
-                    <Icon class="sm:w-[2.4em] w-7" icon="lets-icons:bag-light" width="2.4em" height="2.4em"
+                <div class="flex items-center md:gap-6 sm:col-span-1 col-span-2 gap-2 justify-end">
+                    <Icon class="sm:w-[2em] w-6" icon="solar:heart-broken" width="2em" height="2em"
                         style="color: black" />
-                </router-link>
-                <router-link :to="{ path: '/auth' }">
-                    <Icon class="text-black sm:w-[2em] w-6" icon="solar:user-broken" width="2em" height="2em" />
-                </router-link>
+                    <router-link :to="{ path: '/cart' }">
+                        <Icon class="sm:w-[2.4em] w-7" icon="lets-icons:bag-light" width="2.4em" height="2.4em"
+                            style="color: black" />
+                    </router-link>
+                    <router-link :to="{ path: '/signup' }">
+                        <Icon class="text-black sm:w-[2em] w-6" icon="solar:user-broken" width="2em" height="2em" />
+                    </router-link>
+                </div>
             </div>
         </div>
         <div class="bg-black w-full z-[999] md:h-20 ">
@@ -74,13 +76,13 @@ function activeBar() {
             <div :class="{ 'active-bar': isActive }"
                 class="h-screen xl:container md:container md:pb-0 pb-20 sm:pt-0 w-screen md:h-full mx-auto md:text-base md:px-0 px-8 text-2xl text-white md:flex hidden md:flex-row flex-col items-center gap-20 md:gap-12">
                 <div class="relative categories md:block hidden">
-                    <div class=" cursor-pointer">
+                    <div class="bg-black test cursor-pointer">
                         <p>Danh mục sản phẩm</p>
                     </div>
                     <div class="categories-views absolute z-[999] top-8 w-60 p-4 text-left bg-white text-black">
                         <div
-                            class="men-category cursor-pointer flex items-center justify-between border-b-[1px] border-gray-300 py-2">
-                            <p>Thời trang nam</p>
+                            class=" men-category cursor-pointer flex items-center justify-between border-b-[1px] border-gray-300 py-2">
+                            <p class="bg-white">Thời trang nam</p>
                             <Icon icon="mingcute:right-line" width="1.4em" height="1.4em" style="color: black" />
                             <div class="submen-category p-4 absolute -right-44 w-40 top-6 text-black bg-white">
                                 <div class="border-b-[1px] border-gray-300 pb-2">
@@ -155,6 +157,10 @@ function activeBar() {
 </template>
 
 <style scoped>
+.categories-views {
+    background: white !important;
+}
+
 .active-bar {
     display: flex !important;
 }

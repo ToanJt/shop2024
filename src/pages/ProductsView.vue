@@ -21,7 +21,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="text-left w-pc mx-auto mt-10 mb-20">
+    <div class="text-left container mx-auto md:px-0 px-8 mt-10 mb-20">
         <h1 class="text-4xl font-semibold mb-8">Tất Cả Sản Phẩm</h1>
         <div class="w-full flex flex-wrap gap-4">
             <div v-for="product in products" :key="product.id">

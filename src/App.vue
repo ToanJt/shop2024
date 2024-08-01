@@ -2,7 +2,7 @@
 import Header from "./components/Header.vue"
 import Home from "./pages/HomeView.vue"
 import Footer from "./components/Footer.vue"
-import Auth from "./components/Auth.vue";
+import SignUp from "./components/SignUp.vue";
 
 const emits = defineEmits(['showAuth'])
 
@@ -16,12 +16,12 @@ function test() {
   <header>
     <Header></Header>
   </header>
-  <main class="mt-52">
+  <main class="md:mt-52 mt-40">
     <router-view></router-view>
   </main>
-  <footer>
+  <!-- <footer>
     <Footer></Footer>
-  </footer>
+  </footer> -->
 
 </template>
 

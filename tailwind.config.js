@@ -10,6 +10,9 @@ export default {
         pc: "1280px",
         laptop: "",
       },
+      // container: {
+      //   ssm: "540px",
+      // },
     },
   },
   plugins: [],

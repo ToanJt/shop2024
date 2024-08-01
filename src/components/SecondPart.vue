@@ -3,23 +3,23 @@
 </script>
 
 <template>
-    <main class="w-pc mx-auto mt-20">
+    <main class="container mx-auto mt-20">
         <section class="slide_global-network space-components">
-            <p>Chúng tôi luôn ưu tiên lợi ích của khách hàng</p>
+            <p class="md:text-2xl text-xl mb-8">Chúng tôi luôn ưu tiên lợi ích của khách hàng</p>
             <div class="slide">
                 <div class="slide-decoration-left"></div>
                 <div class="globaln_img">
-                    <img src="../assets/global-network/client-01.svg" alt="" srcset="">
-                    <img src="../assets/global-network/client-02.svg" alt="" srcset="">
-                    <img src="../assets/global-network/client-03.svg" alt="" srcset="">
-                    <img src="../assets/global-network/client-04.svg" alt="" srcset="">
-                    <img src="../assets/global-network/client-05.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-01.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-02.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-03.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-04.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-05.svg" alt="" srcset="">
 
-                    <img src="../assets/global-network/client-01.svg" alt="" srcset="">
-                    <img src="../assets/global-network/client-02.svg" alt="" srcset="">
-                    <img src="../assets/global-network/client-03.svg" alt="" srcset="">
-                    <img src="../assets/global-network/client-04.svg" alt="" srcset="">
-                    <img src="../assets/global-network/client-05.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-01.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-02.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-03.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-04.svg" alt="" srcset="">
+                    <img class="md:w-52 w-24" src="../assets/global-network/client-05.svg" alt="" srcset="">
                 </div>
                 <div class="slide-decoration-right"></div>
             </div>
@@ -36,10 +36,10 @@
     padding: 0 2rem;
 }
 
-.slide_global-network p {
+/* .slide_global-network p {
     font-size: 1.4rem;
     margin-bottom: 50px;
-}
+} */
 
 .slide {
     display: flex;

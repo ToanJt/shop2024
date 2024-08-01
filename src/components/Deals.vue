@@ -28,51 +28,135 @@ const moreProduct = (id) => {
 </script>
 
 <template>
-    <div class="w-pc mx-auto mt-16">
-        <div class="flex justify-between items-center">
-            <h1 class="text-left text-4xl font-bold mb-8">Ưu đãi hôm nay</h1>
+    <div class="container  sm:mx-auto px-8 mt-16 ">
+        <div class="flex justify-between md:items-center items-start">
+            <h1 class="text-left md:text-4xl text-xl font-bold mb-8 ">Ưu đãi hôm nay</h1>
             <div class="flex items-center gap-2 cursor-pointer font-semibold">
-                <p>Xem thêm</p>
+                <p class="sm:text-base text-sm">Xem thêm</p>
                 <Icon icon="cil:arrow-right" width="1.2em" height="1.2em" class="arrow transition-all  text-black" />
             </div>
         </div>
-        <Swiper :modules="modules" @slideChange="onSlideChange" @swiper="onSwiper" navigation :slides-per-view="4"
-            :space-between="20" class="flex gap-4 deals-slide">
-            <SwiperSlide v-for="product in products" :key="product.id">
-                <div @click="moreProduct(product.id)"
-                    class="product-card overflow-hidden relative pb-8 flex flex-col bg-white rounded-sm px-8 max-w-80">
-                    <div class=" absolute z-50 cursor-pointer right-6 top-4">
-                        <div
-                            class="eye-option1 transition-all hover:bg-secondary bg-none w-8 h-8 flex items-center justify-center rounded-full">
-                            <Icon class="hover:text-black text-gray-500" icon="solar:eye-broken" width="1.4em"
-                                height="1.4em" />
+        <div class="sm:hidden block">
+            <Swiper :modules="modules" @slideChange="onSlideChange" @swiper="onSwiper" navigation :slides-per-view="1.5"
+                :space-between="20" class="sm:!hidden !flex gap-4 deals-slide">
+                <SwiperSlide class="block" v-for="product in products" :key="product.id">
+                    <div @click="moreProduct(product.id)"
+                        class="product-card overflow-hidden relative pb-8 flex flex-col bg-white rounded-sm lg:px-8 px-2 max-w-80">
+                        <div class=" absolute z-50 cursor-pointer right-6 top-4">
+                            <div
+                                class="eye-option1 transition-all hover:bg-secondary bg-none w-8 h-8 flex items-center justify-center rounded-full">
+                                <Icon class="hover:text-black text-gray-500" icon="solar:eye-broken" width="1.4em"
+                                    height="1.4em" />
+                            </div>
+                            <div
+                                class="eye-option2 top-9 transition-all hover:bg-secondary bg-none w-8 h-8 flex items-center justify-center rounded-full">
+                                <Icon class="hover:text-black text-gray-500" icon="solar:heart-broken" width="1.4em"
+                                    height="1.4em" />
+                            </div>
                         </div>
-                        <div
-                            class="eye-option2 top-9 transition-all hover:bg-secondary bg-none w-8 h-8 flex items-center justify-center rounded-full">
-                            <Icon class="hover:text-black text-gray-500" icon="solar:heart-broken" width="1.4em"
-                                height="1.4em" />
+                        <img class="img-product lg:w-80 lg:h-60 w-50 h-30 object-cover" :src="product.imageLink" alt="">
+                        <div class="lg:flex block justify-between mt-4 lg:text-base text-sm">
+                            <p>{{ product.name }}</p>
+                            <p>{{ product.price }} vnd</p>
                         </div>
-                    </div>
-                    <img class="img-product w-80 h-60 object-cover" :src="product.imageLink" alt="">
-                    <div class="flex justify-between mt-4">
-                        <p>{{ product.name }}</p>
-                        <p>{{ product.price }} vnd</p>
-                    </div>
-                    <div class="flex items-center mb-4">
-                        <div class="flex">
-                            <Icon icon="emojione:star" width="1em" height="1em" />
-                            <Icon icon="emojione:star" width="1em" height="1em" />
-                            <Icon icon="emojione:star" width="1em" height="1em" />
-                            <Icon icon="emojione:star" width="1em" height="1em" />
-                            <Icon icon="emojione-monotone:star" width="1em" height="1em" style="color: #f2f5f8" />
+                        <div class="flex items-center lg:justify-start justify-center mb-4">
+                            <div class="flex">
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione-monotone:star" width="1em" height="1em" style="color: #f2f5f8" />
+                            </div>
+                            <p class="text-sm text-gray-500">{{ product.ratings }}</p>
                         </div>
-                        <p class="text-sm text-gray-500">{{ product.ratings }}</p>
+                        <button
+                            class="lg:text-base text-sm lg:px-4 px-2 bg-secondary transition-all text-black hover:bg-black hover:text-white ">Thêm
+                            vào giỏ
+                            hàng</button>
                     </div>
-                    <button class="bg-secondary transition-all text-black hover:bg-black hover:text-white ">Thêm vào giỏ
-                        hàng</button>
-                </div>
-            </SwiperSlide>
-        </Swiper>
+                </SwiperSlide>
+            </Swiper>
+        </div>
+        <div class="sm:block hidden">
+            <Swiper :modules="modules" @slideChange="onSlideChange" @swiper="onSwiper" navigation :slides-per-view="2"
+                :space-between="20" class="md:!hidden !flex gap-4 deals-slide">
+                <SwiperSlide class="block" v-for="product in products" :key="product.id">
+                    <div @click="moreProduct(product.id)"
+                        class="product-card overflow-hidden relative pb-8 flex flex-col bg-white rounded-sm lg:px-8 px-2 max-w-80">
+                        <div class=" absolute z-50 cursor-pointer right-6 top-4">
+                            <div
+                                class="eye-option1 transition-all hover:bg-secondary bg-none w-8 h-8 flex items-center justify-center rounded-full">
+                                <Icon class="hover:text-black text-gray-500" icon="solar:eye-broken" width="1.4em"
+                                    height="1.4em" />
+                            </div>
+                            <div
+                                class="eye-option2 top-9 transition-all hover:bg-secondary bg-none w-8 h-8 flex items-center justify-center rounded-full">
+                                <Icon class="hover:text-black text-gray-500" icon="solar:heart-broken" width="1.4em"
+                                    height="1.4em" />
+                            </div>
+                        </div>
+                        <img class="img-product lg:w-80 lg:h-60 w-50 h-30 object-cover" :src="product.imageLink" alt="">
+                        <div class="lg:flex block justify-between mt-4 lg:text-base text-sm">
+                            <p>{{ product.name }}</p>
+                            <p>{{ product.price }} vnd</p>
+                        </div>
+                        <div class="flex items-center lg:justify-start justify-center mb-4">
+                            <div class="flex">
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione-monotone:star" width="1em" height="1em" style="color: #f2f5f8" />
+                            </div>
+                            <p class="text-sm text-gray-500">{{ product.ratings }}</p>
+                        </div>
+                        <button
+                            class="lg:text-base text-sm lg:px-4 px-2 bg-secondary transition-all text-black hover:bg-black hover:text-white ">Thêm
+                            vào giỏ
+                            hàng</button>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+            <Swiper :modules="modules" @slideChange="onSlideChange" @swiper="onSwiper" navigation :slides-per-view="4"
+                :space-between="20" class="md:!flex !hidden gap-4 deals-slide">
+                <SwiperSlide class="block" v-for="product in products" :key="product.id">
+                    <div @click="moreProduct(product.id)"
+                        class="product-card overflow-hidden relative pb-8 flex flex-col bg-white rounded-sm lg:px-8 px-2 max-w-80">
+                        <div class=" absolute z-50 cursor-pointer right-6 top-4">
+                            <div
+                                class="eye-option1 transition-all hover:bg-secondary bg-none w-8 h-8 flex items-center justify-center rounded-full">
+                                <Icon class="hover:text-black text-gray-500" icon="solar:eye-broken" width="1.4em"
+                                    height="1.4em" />
+                            </div>
+                            <div
+                                class="eye-option2 top-9 transition-all hover:bg-secondary bg-none w-8 h-8 flex items-center justify-center rounded-full">
+                                <Icon class="hover:text-black text-gray-500" icon="solar:heart-broken" width="1.4em"
+                                    height="1.4em" />
+                            </div>
+                        </div>
+                        <img class="img-product lg:w-80 lg:h-60 w-50 h-30 object-cover" :src="product.imageLink" alt="">
+                        <div class="lg:flex block justify-between mt-4 lg:text-base text-sm">
+                            <p>{{ product.name }}</p>
+                            <p>{{ product.price }} vnd</p>
+                        </div>
+                        <div class="flex items-center lg:justify-start justify-center mb-4">
+                            <div class="flex">
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione:star" width="1em" height="1em" />
+                                <Icon icon="emojione-monotone:star" width="1em" height="1em" style="color: #f2f5f8" />
+                            </div>
+                            <p class="text-sm text-gray-500">{{ product.ratings }}</p>
+                        </div>
+                        <button
+                            class="lg:text-base text-sm lg:px-4 px-2 bg-secondary transition-all text-black hover:bg-black hover:text-white ">Thêm
+                            vào giỏ
+                            hàng</button>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+        </div>
     </div>
 </template>
 
