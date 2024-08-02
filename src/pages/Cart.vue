@@ -1,6 +1,7 @@
 <script type="module" setup>
 import { computed, onMounted, ref, watch } from "vue"
 import { useRouter } from "vue-router";
+import { Icon } from "@iconify/vue"
 
 const router = useRouter();
 const quantity = ref(0);
@@ -80,6 +81,16 @@ onMounted(() => {
                     <li class="flex justify-between pb-2 mb-3">
                         <p>Thành tiền:</p>
                         <p>1.760.000 VND</p>
+                    </li>
+
+                    <li class="flex justify-between pb-2 mb-3">
+                        <p>Phương thức thanh toán:</p>
+                        <div class="flex gap-4">
+                            <Icon icon="logos:visa" width="2em" height="2em" />
+                            <Icon icon="logos:mastercard" width="2em" height="2em" />
+                            <Icon icon="arcticons:zalopay" width="2em" height="2em" style="color: black" />
+                            <Icon icon="arcticons:momo" width="2em" height="2em" style="color: black" />
+                        </div>
                     </li>
                 </ul>
                 <Button class="flex justify-center">Đặt hàng</Button>
